@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #312E81;
+  --color-primary-dark: #1E1B4B;
+  --color-secondary: #7C3AED;
+  --color-accent: #F59E0B;
+  --color-background: #F8FAFC;
+  --color-surface: #FFFFFF;
+  --color-text: #0F172A;
+  --color-muted: #64748B;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-error: #DC2626;
+
+  --font-heading: 'Poppins', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-urdu: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', 'Urdu Typesetting', serif;
+}
+
+@theme {
+  --color-primary: #312E81;
+  --color-primary-dark: #1E1B4B;
+  --color-secondary: #7C3AED;
+  --color-accent: #F59E0B;
+  --color-background: #F8FAFC;
+  --color-surface: #FFFFFF;
+  --color-text: #0F172A;
+  --color-muted: #64748B;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-error: #DC2626;
+
+  --font-heading: var(--font-heading);
+  --font-sans: var(--font-body);
+  --font-urdu: var(--font-urdu);
+}
+
+/* English Typography */
+html[lang='en'] {
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+html[lang='en'] h1,
+html[lang='en'] h2,
+html[lang='en'] h3,
+html[lang='en'] h4,
+html[lang='en'] .font-heading {
+  font-family: var(--font-heading);
+}
+
+/* Urdu Typography with enhanced vertical spacing for Nastaliq */
+html[lang='ur'] {
+  font-family: var(--font-urdu);
+  line-height: 2;
+}
+
+html[lang='ur'] h1,
+html[lang='ur'] h2,
+html[lang='ur'] h3,
+html[lang='ur'] h4,
+html[lang='ur'] .font-heading {
+  font-family: var(--font-urdu);
+  line-height: 1.9;
+}
+
+/* Base Body Styles */
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-size: 16px;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global Heading Sizes */
+.h1-title {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+@media (min-width: 768px) {
+  .h1-title {
+    font-size: 44px;
+  }
+}
+
+.h2-title {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+@media (min-width: 768px) {
+  .h2-title {
+    font-size: 32px;
+  }
+}
+
+.h3-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+@media (min-width: 768px) {
+  .h3-title {
+    font-size: 24px;
+  }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

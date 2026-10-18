@@ -1,0 +1,8 @@
+{
+  "name": "Remix Unicorn Academy Sadiqabad",
+  "description": "Bilingual (Urdu \u0026 English) portal for Unicorn Academy Sadiqabad - Quality Tuition from Prep to FSc.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
